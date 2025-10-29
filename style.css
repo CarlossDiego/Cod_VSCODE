@@ -60,24 +60,81 @@ body {
     align-items: center;
 }
 
-.linguagens{
+
+.l1:hover{
+    color:gold;
+    transform: scale(1.05);
+}
+
+
+
+.habilidades{
     color:#FFC300;
     text-align: center;
     margin-top: 80px; 
     font-size: 40px;
-
-     
 }
-.lista{
-    color:white;
+
+.listahabilidades{
     list-style: none;
+    padding: 0;
     display: flex;
-    padding: 0%;
-     
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+}
+.listahabilidades li{
+    font-size: 1.2em;
+    margin: 10px 0;
+    transition: transform 0.2s, color 0.2s;
 }
 
-.l1{
-    margin-left: 10px;
-    margin-left: 335px;
-    margin-top: 50px;
+.listahabilidades li:hover {
+    color:gold;
+    transform: scale(1.05);
+}
+
+
+
+.habilidades2{
+    color:#FFC300;
+    text-align: center;
+    margin-top: 80px;
+    font-size: 40px;
+}
+.hab2 {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.hab2 li:hover{
+    color:gold;
+    transform: scale(1.05)
+}
+
+
+
+.soft{
+    color:#FFC300;
+    text-align: center;
+    margin-top: 80px;
+    font-size: 40px;
+}
+
+.softul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.softul li:hover{
+    color: gold;
+    transform: scale(1.05)
 }
