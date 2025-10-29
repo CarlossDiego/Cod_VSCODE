@@ -39,6 +39,64 @@ body {
     overflow: hidden;
 
 }
+.navbar{
+    position: fixed;       
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+  z-index: 1000;         
+  padding: 12px 0;
+}
+
+.navbar ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.navbar a{
+    color: #ffcc00;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar li:hover{
+    color:white;
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+
+.bnt-curriculo{
+    display: inline-block;
+    background-color:#FFC300;
+    color:black;
+    font-weight: bold;
+    padding: 12px 14px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    top: 100px;
+    position: relative;
+
+}
+
+.bnt-curriculo:hover{
+    background-color: #ffb31a;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    transform: scale(1.05);
+}
+
+
+
 .text{
     text-align: center;
     height: 50%
