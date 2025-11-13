@@ -39,38 +39,105 @@ body {
     overflow: hidden;
 
 }
-.navbar{
-    position: fixed;       
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(6px);
-  z-index: 1000;         
-  padding: 12px 0;
+/* FLUTUAÇÃO PREMIUM */
+@keyframes floatPremium {
+  0% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 0 0 rgba(255, 204, 0, 0.0);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.06);
+    box-shadow: 0 0 18px rgba(255, 204, 0, 0.45);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 0 0 rgba(255, 204, 0, 0.0);
+  }
+}
+.navbar li {
+  /* ...seus estilos atuais aqui (background, tamanho, etc)... */
+
+  animation: floatPremium 3.8s ease-in-out infinite;
+}
+.navbar li:nth-child(1) {
+  animation-duration: 3.4s;
+  animation-delay: 0s;
 }
 
-.navbar ul{
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
+.navbar li:nth-child(2) {
+  animation-duration: 4s;
+  animation-delay: 0.2s;
 }
 
-.navbar a{
-    color: #ffcc00;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s;
+.navbar li:nth-child(3) {
+  animation-duration: 3.6s;
+  animation-delay: 0.4s;
 }
 
-.navbar li:hover{
-    color:white;
-    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
-    transform: scale(1.1);
+.navbar li:nth-child(4) {
+  animation-duration: 4.3s;
+  animation-delay: 0.6s;
+}
+
+
+
+/* NAVBAR fixa na esquerda */
+.navbar {
+  position: fixed;       
+  top: 20%;
+  left: 20px;
+  width: 180px;               /* largura da área esquerda */
+  z-index: 1000;
+  padding: 10px 0;
+  background: transparent;    /* sem barra, só os botões */
+}
+
+/* UL agora é vertical */
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;      /* um embaixo do outro */
+  gap: 18px;                   /* espaço entre as bolinhas */
+}
+
+/* Cada LI vira uma “bolinha” */
+.navbar li {
+    width: 80px;
+    height: 80px;
+    background: #000000;
+    border-radius: 50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow: 0 0 0 rgba(255, 204, 0, 0);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Texto dentro das bolinhas */
+.navbar a {
+  color: #ccc;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 12px;
+  transition: color 0.3s;
+  text-align: center;
+}
+
+/* Hover das bolinhas */
+.navbar li:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
+}
+
+.navbar li:hover a {
+  color: white;
+}
+
+.navbar li.hovered{
+    transform: scale(1.15);
+    box-shadow: 0 0 18px rgba(255, 204, 0, 0.8);
 }
 
 
@@ -99,7 +166,10 @@ body {
 
 .text{
     text-align: center;
-    height: 50%
+    height: 50%;
+    max-width: 990px;
+    margin:0% auto;
+    
     
 }
 .sobremim{
@@ -114,8 +184,21 @@ body {
 
 }
 
+.projetos{
+    color:#FFC300;
+    text-align: center;
+    margin-top: 80px; 
+    font-size: 40px;
+}
+.projetos p{
+    font-size: 20px;
+    margin-top: 20px;
+    color: #ccc;
+}
+
 .video{
-    align-items: center;
+    display: block;
+    margin: 40px auto;
 }
 
 
@@ -195,4 +278,35 @@ body {
 .softul li:hover{
     color: gold;
     transform: scale(1.05)
+}
+
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.titleform{
+    color:#FFC300;
+    text-align: center;
+    margin-top: 80px;
+    font-size: 60px;
+}
+.textform{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.footerform{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #ccc;
 }
