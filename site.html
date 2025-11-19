@@ -59,8 +59,64 @@
 
     <section class="projetos">
     <h2 id="projetos">Projetos pessoais</h2>
-    <p>em breve...</p>
+    <p>Projetos que desenvolvi para aprimorar minhas habilidades e explorar novas tecnologias.</p>
         </section>
+    <section class="projetos" id="projetos">
+            
+
+            <div class="grid-projetos">
+
+                <div id="belocaos" class="container-projetos">
+                    <h2>Belocaos</h2>
+                    <p class="tecnologias"><span>Tecnologias:</span> WordPress, JS, WooCommerce</p>
+                    <p class="descricao">
+                        E-commerce moderno em WordPress com UI refinada, otimização de performance,
+                        integração marketplace e automação.
+                    </p>
+                    <a href="https://belocaos.com.br/" target="_blank" class="thumb-link">
+                        <img src="imagens/belocaos.png" class="imagem-projetos" alt="Projeto Belocaos">
+                    </a>
+                    <div class="acoes-projeto">
+                        <button onclick="mostrarPopupB()" target="_blank" class="botao-projeto">Ver projeto</button>
+                    </div>
+                </div>
+
+                <div id="caojunto" class="container-projetos">
+                    <h2>Cãojunto</h2>
+                    <p class="tecnologias"><span>Tecnologias:</span> WordPress, JS, Copywriting, Elementor</p>
+                    <p class="descricao">
+                        Landing page de alta conversão focada em comportamento canino, copywriting estratégico
+                        e design premium.
+                    </p>
+                    <a href="https://xn--cojunto-xwa.com/" target="_blank" class="thumb-link">
+                        <img src="imagens/caojunto.png" class="imagem-projetos" alt="Projeto Cãojunto">
+                    </a>
+                    <div class="acoes-projeto">
+                        <button onclick="mostrarPopupC()" target="_blank" class="botao-projeto">Ver projeto</button>
+                    </div>
+                </div>
+
+                <div id="ipscanner" class="container-projetos">
+                    <h2>IP Scanner</h2>
+                    <p class="tecnologias"><span>Tecnologias:</span> Python, Tkinter, Pillow, Multithread</p>
+                    <p class="descricao">
+                        Software avançado em Python para análise de rede, scanner de IPs e identificação de
+                        dispositivos.
+                    </p>
+                    <a href="https://github.com/eduuhs0uza/IP-SCANNER" target="_blank" class="thumb-link">
+                        <img src="imagens/ipscanner.png" class="imagem-projetos" alt="Projeto IP Scanner">
+                    </a>
+                    <div class="acoes-projeto">
+                        <a href="https://github.com/eduuhs0uza/IP-SCANNER" target="_blank" class="botao-projeto">
+                            Ver código no GitHub
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
     <iframe class="video" width="560" height="315"
             src="https://www.youtube.com/embed/GPQhIrp1AJ4?si=0N6AcS8C1PoKO8sv"
             title="Youtube Video"
@@ -81,54 +137,103 @@
 
 
 
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Formulário de Contato </title>
+    <title>Formulário de Contato</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1 class="titleform" id="contato">Formulário de Contato</h1>
-        <p class="textform">Preencha os campos abaixo para entrar em contato conosco.</p>
-    </header>
+    <main>
+        <!-- SEÇÃO COM BANNER DE FUNDO -->
+        <section class="form-bg">
 
-    <form class="formulario">
+            <!-- Cabeçalho -->
+            <header class="form-header">
+                <h1 class="titleform" id="contato">Formulário de Contato</h1>
+                <p class="textform">Preencha os campos abaixo para entrar em contato conosco.</p>
+            </header>
 
-        <label for="nome">Nome Completo:</label><br>
-        <input type="text" id="nome" name="nome" placeholder="Seu nome aqui"><br><br>
+            <!-- Formulário -->
+            <form class="formulario">
 
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome aqui" required>
+                </div>
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com"><br><br>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
+                </div>
 
-        
-        <label for="numero">Numero</label><br>
-        <input type="tel" id="numero" name="numero" placeholder="(XX) XXXXX-XXXX"><br><br>
+                <div class="form-group">
+                    <label for="numero">Número:</label>
+                    <input type="tel" id="numero" name="numero" placeholder="(XX) XXXXX-XXXX" required>
+                </div>
 
+                <fieldset class="form-group">
+                    <legend>Quais linguagens de programação você precisa?</legend>
 
-        <p>Quais linguagens de programação você precisa?</p>
-        <input type="checkbox" id="python" name="linguagem" value="python">
-        <label for="python">Python</label><br>
-        <input type="checkbox" id="java" name="linguagem" value="java">
-        <label for="java">Java</label><br>
-        <input type="checkbox" id="html_css" name="linguagem" value="html_css">
-        <label for="html_css">HTML/CSS</label><br><br>
+                    <label>
+                        <input type="checkbox" name="linguagem[]" value="python">
+                        Python
+                    </label><br>
 
+                    <label>
+                        <input type="checkbox" name="linguagem[]" value="java">
+                        Java
+                    </label><br>
 
-        <label for="mensagem">Sua Mensagem:</label><br>
-        <textarea id="mensagem" name="mensagem" rows="5" cols="40" placeholder="Digite sua mensagem aqui..."></textarea><br><br>
+                    <label>
+                        <input type="checkbox" name="linguagem[]" value="html_css">
+                        HTML/CSS
+                    </label>
+                </fieldset>
 
-        <button type="submit">Enviar Formulário</button>
-        <button type="reset">Limpar Campos</button>
-    </form>
+                <div class="form-group">
+                    <label for="mensagem">Sua Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem aqui..." required></textarea>
+                </div>
 
-    <footer>
-        <p class="footerform">Obrigado por seu contato!</p>
-    </footer>
+                <div class="button-group">
+                    <button type="submit">Enviar Formulário</button>
+                    <button type="reset">Limpar Campos</button>
+                </div>
 
+            </form>
+
+            <!-- Rodapé -->
+            <footer class="form-footer">
+                <p class="footerform">Obrigado por seu contato!</p>
+            </footer>
+
+        </section>
+    </main>
+<div id="popupC" class="modal-overlay">
+
+        <div class="modal-content">
+            <span class="fechar-btn" onclick="fecharPopupC()">&times;</span>
+            <h3 style="text-align: center;">Cão Junto</h3>
+            <iframe src="https://xn--cojunto-xwa.com" width="1370" height="700" title="Example Website"
+                loading="lazy"></iframe>
+        </div>
+
+    </div>
+
+    <div id="popupB" class="modal-overlay">
+
+        <div class="modal-content">
+            <span class="fechar-btn" onclick="fecharPopupB()">&times;</span>
+            <h3 style="text-align: center;">Belo Caos</h3>
+            <iframe src="https://belocaos.com.br" width="1370" height="700" title="Example Website"
+                loading="lazy"></iframe>
+        </div>
+
+    </div>
+<script src="script.js"></script>
 </body>
 </html>
