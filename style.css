@@ -106,7 +106,7 @@ body {
 .navbar li {
     width: 80px;
     height: 80px;
-    background: #000000;
+    background: #c8c8c8;
     border-radius: 50%;
     display:flex;
     align-items:center;
@@ -117,7 +117,7 @@ body {
 
 /* Texto dentro das bolinhas */
 .navbar a {
-  color: #ccc;
+  color: #744e02;
   font-weight: bold;
   text-decoration: none;
   font-size: 12px;
